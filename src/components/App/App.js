@@ -8,10 +8,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div>
         <header className="App-header">
           <h1>Cheng-kou Tongkhuya</h1>
-          <img src = "images/goat_small.jpg" />
+          <img src = "images/DededeSmash3.png" />
       </header>
+      </div>
       <div>
           <Project/>
 
