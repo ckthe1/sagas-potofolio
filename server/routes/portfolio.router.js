@@ -2,7 +2,7 @@ const express = require('express');
 const pool = require('../modules/pool');
 
 const router = express.Router();
-// const myPortfolio = [];
+
 router.get('/', (req, res) => {
     const queryText = 'SELECT * FROM "projects"';
     pool.query(queryText)
@@ -10,9 +10,17 @@ router.get('/', (req, res) => {
         .catch((err) => {
             console.log('Error completing SELECT portfolio query', err);
             res.sendStatus(500);
-        });
-    // res.send(myPortfolio);
+        }); 
 });
+// router.get('/details/:id', (req, res) => {
+//     const queryText = 'SELECT * FROM project WHERE id=$1';
+//     pool.query(queryText, [req.params.id])
+//         .then((result) => { res.send(result.rows); })
+//         .catch((err) => {
+//             console.log('Error completing SELECT project query', err);
+//             res.sendStatus(500);
+//         });
+// });
 
 router.post('/', (req, res) => {
     const newPortfolio = req.body;
@@ -25,13 +33,24 @@ router.post('/', (req, res) => {
         newPortfolio.website,
         newPortfolio.github,
         newPortfolio.date_completed,
-        newPortfolio.tag_id,
+        newPortfolio.tag,
        
     ];
     pool.query(queryText, queryValues)
         .then(() => { res.sendStatus(201); })
         .catch((err) => {
             console.log('Error completing SELECT portfolio query', err);
+            res.sendStatus(500);
+        });
+});
+
+router.delete('/:id', (req, res) => {
+    const queryText = 'DELETE FROM "projects" WHERE "id"=$1';
+    pool.query(queryText, [req.params.id])
+        .then(() => { 
+            res.sendStatus(200); 
+        }).catch((err) => {
+            console.log('Error completing delete projects query', err);
             res.sendStatus(500);
         });
 });

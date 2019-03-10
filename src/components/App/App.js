@@ -12,13 +12,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-
           <div>
             <Route exact path="/admin" component={Admin} />
             <Route exact path="/home" component={Home} />
-
           </div>
-
         </div>
       </Router>
     

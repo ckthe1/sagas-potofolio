@@ -26,8 +26,7 @@ const styles = {
     pos: {
         margin: 12,
     },
-
-};
+};// Cards Styles
 
 
 class Project extends Component {
@@ -64,9 +63,7 @@ class Project extends Component {
 
         console.log('this.props.reduxState.projects:', this.props.reduxState.project);
         const { classes } = this.props;
-        return (
-            
-            
+        return (           
             <div>
             <div className="App">
                 <Card className={classes.card} >
@@ -81,7 +78,7 @@ class Project extends Component {
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             Project Pegasus: {this.props.name}
                         </Typography>
-                            <img src="images/Screen1.png" />
+                        <img src="images/Screen1.png" />
                     </CardContent>                
                 </Card>
             </div>
@@ -97,7 +94,6 @@ class Project extends Component {
                             <img src="images/ScreenGarden.png" />
                     </CardContent>
                 </Card>
-
             </div>
             </div>
         );

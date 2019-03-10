@@ -26,10 +26,9 @@ function* fetchProject(){
 function* postProject(action) {
     try {
         yield axios.post('/portfolio', action.payload);
-        yield dispatch({ type: 'FETCH_PROJECTS' });
+        yield dispatch({ type: 'FETCH_PROJECT' });
     } catch (error) {
         console.log('this was an error with the post- probably your fault');
-
     }
 } //end postProject
 
@@ -37,12 +36,11 @@ function* postProject(action) {
 function* deleteProject(action) {
     try {
         console.log('delete project hit', action)
-
         yield axios({
             method: 'DELETE',
-            url: `/portfolio` + action.payload,
+            url: `/portfolio/${action.payload}`,
         });
-        yield dispatch({ type: 'FETCH_PROJECTS' })
+        yield dispatch({ type: 'FETCH_PROJECT' })
     } catch (error) {
         console.log('Failed in deleteProject', error)
     }
@@ -51,7 +49,7 @@ function* deleteProject(action) {
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_PROJECT', fetchProject);
-    yield takeEvery('POST_PROJECT', postProject);
+    yield takeEvery('ADD_PROJECT', postProject);
     yield takeEvery('DELETE_PROJECT', deleteProject);
 }
 
