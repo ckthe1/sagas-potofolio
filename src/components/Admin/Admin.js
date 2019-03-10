@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import '../App/App.css';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Header from '../Header/Header';
+
 
 
 class Admin extends Component {
-    // Renders the entire app on the DOM
+  
+
+
+
+
     render() {
         return (
             <Router>
@@ -20,7 +24,7 @@ class Admin extends Component {
                     <form onSubmit={this.handleSubmit} className="Admin-body">
                         <input type="text" placeholder="Name" onChange={this.handleChange} />
                         <input type="date" onChange={this.handleChange} />
-                        <select name="Select a Tag" >
+                        <select name="Select a Tag" onChange={this.handleChange}>
                             <option value="react">React</option>
                             <option value="jQuery">jQuery</option>
                             <option value="node">Node</option>
@@ -29,8 +33,8 @@ class Admin extends Component {
                             <option value="html">HTML</option>
                         </select>
                         <div>
-                            <input type="url" placeholder="Github URL" size="26"/>
-                            <input type="url" placeholder="Website URL (Optional)" size="26"/>
+                            <input onChange={this.handleChange} type="url" placeholder="Github URL" size="26"/>
+                            <input onChange={this.handleChange} type="url" placeholder="Website URL (Optional)" size="26"/>
                            
                         </div>
                         <div>

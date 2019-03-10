@@ -23,15 +23,15 @@ function* fetchProject(){
     }
 }
 
-// function* postProject(action) {
-//     try {
-//         yield axios.post('/portfolio', action.payload);
-//         yield dispatch({ type: 'FETCH_PROJECTS' });
-//     } catch (error) {
-//         console.log('this was an error with the post- probably your fault');
+function* postProject(action) {
+    try {
+        yield axios.post('/portfolio', action.payload);
+        yield dispatch({ type: 'FETCH_PROJECTS' });
+    } catch (error) {
+        console.log('this was an error with the post- probably your fault');
 
-//     }
-// } //end postProject
+    }
+} //end postProject
 
 
 function* deleteProject(action) {
@@ -51,8 +51,8 @@ function* deleteProject(action) {
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_PROJECT', fetchProject);
-    // yield takeEvery('POST_PROJECT', postProject);
-    // yield takeEvery('DELETE_PROJECT', deleteProject);
+    yield takeEvery('POST_PROJECT', postProject);
+    yield takeEvery('DELETE_PROJECT', deleteProject);
 }
 
 // Create sagaMiddleware
