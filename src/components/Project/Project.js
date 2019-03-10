@@ -62,7 +62,7 @@ class Project extends Component {
         //     return this.props.projects.date_completed;
         // }
 
-        console.log('this.props.reduxState.projects:', this.props.reduxState.projects);
+        console.log('this.props.reduxState.projects:', this.props.reduxState.project);
         const { classes } = this.props;
         return (
             

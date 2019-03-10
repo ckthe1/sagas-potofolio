@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
-
 import Project from '../Project/Project';
 
 

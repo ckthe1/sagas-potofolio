@@ -14,25 +14,26 @@ router.get('/', (req, res) => {
     // res.send(myPortfolio);
 });
 
-// router.post('/', (req, res) => {
-//     const newPortfolio = req.body;
-//     const queryText = `INSERT INTO portfolio ("name", "description", "thumbnail", "website", "github", "date_completed")
-//                     VALUES ($1, $2, $3, $4, $5, $6)`;
-//     const queryValues = [
-//         newPortfolio.name,
-//         newPortfolio.description,
-//         newPortfolio.thumbnail,
-//         newPortfolio.website,
-//         newPortfolio.github,
-//         newPortfolio.date_completed,
+router.post('/', (req, res) => {
+    const newPortfolio = req.body;
+    const queryText = `INSERT INTO "projects" ("name", "description", "thumbnail", "website", "github", "date_completed", "tag_id")
+                    VALUES ($1, $2, $3, $4, $5, $6, $7)`;
+    const queryValues = [
+        newPortfolio.name,
+        newPortfolio.description,
+        newPortfolio.thumbnail,
+        newPortfolio.website,
+        newPortfolio.github,
+        newPortfolio.date_completed,
+        newPortfolio.tag_id,
        
-//     ];
-//     pool.query(queryText, queryValues)
-//         .then(() => { res.sendStatus(201); })
-//         .catch((err) => {
-//             console.log('Error completing SELECT portfolio query', err);
-//             res.sendStatus(500);
-//         });
-// });
+    ];
+    pool.query(queryText, queryValues)
+        .then(() => { res.sendStatus(201); })
+        .catch((err) => {
+            console.log('Error completing SELECT portfolio query', err);
+            res.sendStatus(500);
+        });
+});
 
 module.exports = router;
