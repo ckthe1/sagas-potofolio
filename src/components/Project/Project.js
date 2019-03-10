@@ -42,24 +42,48 @@ class Project extends Component {
 
    
     render() {
+        // if (this.props.projects.name !== null){
+        //     return this.props.projects.name;
+        // }
 
+        // if (this.props.projects.description !== null){
+        //     return this.props.projects.description;
+        // }
+        // if (this.props.projects.thumbnail !== null) {
+        //     return this.props.projects.thumbnail;
+        // }
+        // if (this.props.projects.website !== null) {
+        //     return this.props.projects.website;
+        // }
+        // if (this.props.projects.github !== null) {
+        //     return this.props.projects.github;
+        // }
+        // if (this.props.projects.date_completed !== null) {
+        //     return this.props.projects.date_completed;
+        // }
+
+        console.log('this.props.reduxState.projects:', this.props.reduxState.projects);
         const { classes } = this.props;
         return (
+            
+            
             <div>
             <div className="App">
                 <Card className={classes.card} >
                     <CardContent>
                         <Typography variant="h5" component="h2">
-                            Project Name: {this.props.plantKingdom}
+                                Project: {this.props.reduxState.projects.name} 
+                                {this.props.github} 
+                                {this.props.website}
+                                {this.props.date_completed}
+                                {this.props.description}
                         </Typography> 
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Project Pegasus: {this.props.plantName}
+                            Project Pegasus: {this.props.name}
                         </Typography>
                             <img src="images/Screen1.png" />
-                    </CardContent>
-                   
+                    </CardContent>                
                 </Card>
-
             </div>
             <div className="App">
                 <Card className={classes.card} >
@@ -72,7 +96,6 @@ class Project extends Component {
                         </Typography>
                             <img src="images/ScreenGarden.png" />
                     </CardContent>
-
                 </Card>
 
             </div>

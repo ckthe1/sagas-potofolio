@@ -22,6 +22,32 @@ function* fetchProject(){
         console.log('this was an error with the fetch- probably your fault');
     }
 }
+
+// function* postProject(action) {
+//     try {
+//         yield axios.post('/portfolio', action.payload);
+//         yield dispatch({ type: 'FETCH_PROJECTS' });
+//     } catch (error) {
+//         console.log('this was an error with the post- probably your fault');
+
+//     }
+// } //end postProject
+
+
+function* deleteProject(action) {
+    try {
+        console.log('delete project hit', action)
+
+        yield axios({
+            method: 'DELETE',
+            url: `/portfolio` + action.payload,
+        });
+        yield dispatch({ type: 'FETCH_PROJECTS' })
+    } catch (error) {
+        console.log('Failed in deleteProject', error)
+    }
+}// end deleteProject
+
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_PROJECT', fetchProject);
@@ -65,6 +91,5 @@ const storeInstance = createStore(
 // Pass rootSaga into our sagaMiddleware
 sagaMiddleware.run(rootSaga);
 
-ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
-    document.getElementById('root'));
+ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

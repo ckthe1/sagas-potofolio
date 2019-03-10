@@ -5,11 +5,16 @@
 
 .App-header {
   background-color: rgb(69, 78, 218);
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
+.Admin-body{
+  height: 100px;
+  padding: 20px;
+  color: white;
 
+}
 .App-title {
   font-size: 1.5em;
 }
@@ -22,7 +27,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/* body {
-  background-image: url('./images/goat_small.jpg');
 
-} */
+
+.DescriptionField{
+height:70px;
+width:307px;
+}
+
+.Link-field{
+  text-align:left;
+  padding:12px;
+}
