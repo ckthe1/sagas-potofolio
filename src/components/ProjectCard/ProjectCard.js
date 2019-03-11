@@ -42,25 +42,24 @@ class ProjectCard extends Component {
                             Project: {this.props.projectName}
                     </Typography>
                     <Typography  >
-                                Description: {this.props.projectDescription}
+                            Description: {this.props.projectDescription}
                     </Typography>
 
                     <Typography className={classes.pos} color="textSecondary">
-                                Thumbnail: {this.props.projectThumbnail}
+                            Thumbnail: {this.props.projectThumbnail}
                     </Typography>
 
                     <Typography component="p">
-                                Github: {this.props.projectGithub}
+                            Github: {this.props.projectGithub}
                     </Typography>
 
                     <Typography component="p">
-                                Website: {this.props.projectWebsite}
+                            Website: {this.props.projectWebsite}
                     </Typography>
 
                     <Typography component="p">
-                                Date: {this.props.projectDate}
+                            Date: {this.props.projectDate}
                     </Typography>
-
 
                 </CardContent>
             </Card>
