@@ -22,8 +22,9 @@ const styles = {
     pos: {
         margin: 12,
     },
-
 };
+
+//Use material UI to display info as that look like cards.
 class ProjectCard extends Component {
 
     render() {
@@ -32,7 +33,6 @@ class ProjectCard extends Component {
 
         const { classes } = this.props;
         return (
-
             <Card className={classes.card} >
                 <CardContent>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-// import Project from '../Project/Project';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from '../Home/Home';
 import Admin from '../Admin/Admin';
 
+
+// Routes to home page and admin page
 class App extends Component {
 
   render() {
@@ -17,8 +18,7 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
           </div>
         </div>
-      </Router>
-    
+      </Router>    
     );
   }
 }

@@ -37,6 +37,8 @@ class Project extends Component {
 
    
     render() {
+
+        //TEST CONDITIONAL RENDERING BELOW
         // if (this.props.projects.github !== "null" && this.props.projects.name !== "null") {
         //     return this.props.projects.github
         // } else {
@@ -90,6 +92,7 @@ class Project extends Component {
         );
     }
 }
+// map thru projects array, and props being passed to ProjectCard
 
 const mapReduxStateToProps = (reduxState) => {
     return reduxState;

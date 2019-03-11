@@ -29,16 +29,16 @@ onChange = (property) => (event) => {
         ...this.state,
         [property]: event.target.value,
     });
-};
+};// get inputs infos onChange
 
 getProjects = () => {
-    //make call to server using axios
+    //make call to server using sagas
     console.log('going to get projects');
     this.props.dispatch({ type: 'FETCH_PROJECTS' });
 }
-    handleDelete = (id) =>()=> {
-        this.props.dispatch({ type: 'DELETE_PROJECT', payload: id }); 
-    }
+handleDelete = (id) =>()=> {
+    this.props.dispatch({ type: 'DELETE_PROJECT', payload: id }); 
+    }// delete function using sagas
 
 adminList() {
     console.log('this.props.projects', this.props.projects);
@@ -51,7 +51,8 @@ adminList() {
             <td><button onClick={this.handleDelete(project.id)} className="deleteButton">Delete</button></td>
         </tr>
     )
-}
+}// map thru projects array and display name and description of project onto the DOM
+
 render() {
     return (
         <div>

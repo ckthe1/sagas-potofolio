@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import Project from '../Project/Project';
 
-
+// Homepage display below
 class Home extends Component {
 
     render() {
