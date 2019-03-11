@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import '../App/App.css';
 import { connect } from 'react-redux';
-
-// import Button from '@material-ui/core/Button';
-// import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import Typography from '@material-ui/core/Typography';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 
@@ -43,6 +37,11 @@ class Project extends Component {
 
    
     render() {
+        // if (this.props.projects.github !== "null" && this.props.projects.name !== "null") {
+        //     return this.props.projects.github
+        // } else {
+        //     return this.props.projects.github == ''
+        // };
         // if (this.props.projects.name !== null){
         //     return this.props.projects.name;
         // }
@@ -64,7 +63,7 @@ class Project extends Component {
         // }
 
         console.log('this.props.projects:', this.props.projects);
-        // const { classes } = this.props;
+     
         return (           
             <div>
                 <div className="flex-container">

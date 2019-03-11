@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
@@ -29,6 +27,8 @@ const styles = {
 class ProjectCard extends Component {
 
     render() {
+
+
 
         const { classes } = this.props;
         return (
