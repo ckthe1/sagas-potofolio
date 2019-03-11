@@ -34,7 +34,7 @@ onChange = (property) => (event) => {
 getProjects = () => {
     //make call to server using sagas
     console.log('going to get projects');
-    this.props.dispatch({ type: 'FETCH_PROJECTS' });
+    this.props.dispatch({ type: 'FETCH_PROJECT' });
 }
 handleDelete = (id) =>()=> {
     this.props.dispatch({ type: 'DELETE_PROJECT', payload: id }); 
