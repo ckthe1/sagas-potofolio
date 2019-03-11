@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
         }); 
 });
 
-
 router.post('/', (req, res) => {
     const newPortfolio = req.body;
     const queryText = `INSERT INTO "projects" ("name", "description", "thumbnail", "website", "github", "date_completed", "tag_id")

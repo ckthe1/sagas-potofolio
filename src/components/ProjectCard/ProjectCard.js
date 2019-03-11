@@ -31,7 +31,6 @@ class ProjectCard extends Component {
     render() {
 
         const { classes } = this.props;
-
         return (
 
             <Card className={classes.card} >
@@ -62,9 +61,6 @@ class ProjectCard extends Component {
                                 Date: {this.props.projectDate}
                     </Typography>
 
-                    <Typography component="p">
-                                Tag: {this.props.projectTag}
-                    </Typography>
 
                 </CardContent>
             </Card>
@@ -76,8 +72,7 @@ class ProjectCard extends Component {
 const mapStateToProps = (reduxState) => {
     return reduxState;
 };
-                                
-                                
+                                                               
 ProjectCard.propTypes = {
     classes: PropTypes.object.isRequired,
 };
