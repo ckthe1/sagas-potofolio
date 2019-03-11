@@ -93,6 +93,13 @@ render() {
                 <button onClick={this.handleSubmit}>Submit</button>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
                 <tbody>
                     {this.adminList()}
                 </tbody>
