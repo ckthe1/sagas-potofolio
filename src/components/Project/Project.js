@@ -3,12 +3,14 @@ import '../App/App.css';
 import { connect } from 'react-redux';
 
 // import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
+// import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 // import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+// import CardContent from '@material-ui/core/CardContent';
+// import Typography from '@material-ui/core/Typography';
+import ProjectCard from '../ProjectCard/ProjectCard';
+
 
 const styles = {
     card: {
@@ -61,48 +63,38 @@ class Project extends Component {
         //     return this.props.projects.date_completed;
         // }
 
-        console.log('this.props.reduxState.projects:', this.props.reduxState.project);
+        console.log('this.props.projects:', this.props.projects);
         const { classes } = this.props;
         return (           
             <div>
             <div className="App">
-                <Card className={classes.card} >
-                    <CardContent>
-                        <Typography variant="h5" component="h2">
-                                Project: {this.props.reduxState.projects.name} 
-                                {this.props.github} 
-                                {this.props.website}
-                                {this.props.date_completed}
-                                {this.props.description}
-                        </Typography> 
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Project Pegasus: {this.props.name}
-                        </Typography>
-                        <img src="images/Screen1.png" />
-                    </CardContent>                
-                </Card>
+                {this.props.projects.map((project)=>{
+                    return(
+                        <>
+                            <ProjectCard 
+                            projectId={project.id}
+                                projectName={project.name}
+                                projectDescription={project.description}
+                                projectThumbnail={project.thumbnail}
+                                projectWebsite={project.website}
+                                projectGithub={project.github}
+                                projectDate={project.date_completed}
+                                projectTag={project.tag_id}
+                        />
+                      </>
+
+                    );
+                })}
             </div>
-            <div className="App">
-                <Card className={classes.card} >
-                    <CardContent>
-                        <Typography variant="h5" component="h2">
-                            Project Name: {this.props.plantKingdom}
-                        </Typography>
-                        <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            Project NTM: {this.props.plantName}
-                        </Typography>
-                            <img src="images/ScreenGarden.png" />
-                    </CardContent>
-                </Card>
-            </div>
+
             </div>
         );
     }
 }
 
-const mapReduxStateToProps = reduxState => ({
-    reduxState
-});
+const mapReduxStateToProps = (reduxState) => {
+    return reduxState;
+};
 
 Project.propTypes = {
     classes: PropTypes.object.isRequired,
