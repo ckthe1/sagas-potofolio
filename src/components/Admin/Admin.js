@@ -30,9 +30,7 @@ onChange = (property) => (event) => {
         [property]: event.target.value,
     });
 };
-// handleClick = (event) => {
-//     event.preventDefault();
-// };
+
 getProjects = () => {
     //make call to server using axios
     console.log('going to get projects');
@@ -41,14 +39,13 @@ getProjects = () => {
     handleDelete = (id) =>()=> {
         this.props.dispatch({ type: 'DELETE_PROJECT', payload: id }); 
     }
-    
+
 adminList() {
     console.log('this.props.projects', this.props.projects);
   
     return this.props.projects.map(project =>
         
         <tr key={project.id}>
-            <td> {project.id} </td>
             <td> {project.name} </td>
             <td> {project.description} </td> 
             <td><button onClick={this.handleDelete(project.id)} className="deleteButton">Delete</button></td>
@@ -85,11 +82,10 @@ render() {
                 <input type="text" placeholder="Web URL" value={this.state.web} onChange={this.onChange('website')} size="22"/>
                 <select value={this.state.thumbnail} onChange={this.onChange('thumbnail')}>
                     <option value=" " >Add Thumbnail</option>
-                    <option value="./images/bookstore.png">Book Store</option>
-                    <option value="./images/calculator.png">calculator</option>
-                    <option value="./images/feedback.png">feedback</option>
-                    <option value="./images/list.png">List</option>
-                    <option value="./images/restaurant.png">restaurant</option>
+                    <option value="./images/goat_small.png">Book Store</option>
+                    <option value="./images/fruit_basket.png">Fruit Basket</option>
+                    <option value="./images/ScreenGarden.png">Saga Garden</option>               
+                    <option value="./images/lazyLuigiPizzaParlor.png">Pizza Parlor</option>
                 </select>
                 </div>
                 <input type="text" placeholder="Description" value={this.state.description} onChange={this.onChange('description')} className="DescriptionField"/><br />

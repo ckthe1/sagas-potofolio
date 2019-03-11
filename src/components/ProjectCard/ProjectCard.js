@@ -41,7 +41,7 @@ class ProjectCard extends Component {
                     <Typography variant="h5" component="h2">
                             Project: {this.props.projectName}
                     </Typography>
-                    <Typography variant="h5" component="h2">
+                    <Typography  >
                                 Description: {this.props.projectDescription}
                     </Typography>
 
