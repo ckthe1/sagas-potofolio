@@ -22,7 +22,10 @@
 .App-intro {
   font-size: large;
 }
-
+body{
+  background-image: url('/images/back.jpg');
+  background-size: cover; 
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -38,3 +41,7 @@ width:365px;
   text-align:left;
   padding:12px;
 }
+
+/* .flex-container {
+  display: flex;
+} */

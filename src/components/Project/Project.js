@@ -64,10 +64,10 @@ class Project extends Component {
         // }
 
         console.log('this.props.projects:', this.props.projects);
-        const { classes } = this.props;
+        // const { classes } = this.props;
         return (           
             <div>
-            <div className="App">
+                <div className="flex-container">
                 {this.props.projects.map((project)=>{
                     return(
                         <>
