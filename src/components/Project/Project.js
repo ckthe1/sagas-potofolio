@@ -38,31 +38,6 @@ class Project extends Component {
    
     render() {
 
-        //TEST CONDITIONAL RENDERING BELOW
-        // if (this.props.projects.github !== "null" && this.props.projects.name !== "null") {
-        //     return this.props.projects.github
-        // } else {
-        //     return this.props.projects.github == ''
-        // };
-        // if (this.props.projects.name !== null){
-        //     return this.props.projects.name;
-        // }
-
-        // if (this.props.projects.description !== null){
-        //     return this.props.projects.description;
-        // }
-        // if (this.props.projects.thumbnail !== null) {
-        //     return this.props.projects.thumbnail;
-        // }
-        // if (this.props.projects.website !== null) {
-        //     return this.props.projects.website;
-        // }
-        // if (this.props.projects.github !== null) {
-        //     return this.props.projects.github;
-        // }
-        // if (this.props.projects.date_completed !== null) {
-        //     return this.props.projects.date_completed;
-        // }
 
         console.log('this.props.projects:', this.props.projects);
      
