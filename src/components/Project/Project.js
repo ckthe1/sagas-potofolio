@@ -41,7 +41,9 @@ class Project extends Component {
 
         console.log('this.props.projects:', this.props.projects);
      
-        return (           
+        return (      
+            
+            <h1>is this working</h1>
             <div>
                 <div className="flex-container">
                 {this.props.projects.map((project)=>{

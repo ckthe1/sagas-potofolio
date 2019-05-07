@@ -31,15 +31,13 @@ class ProjectCard extends Component {
 
     render() {
 
-
-
         const { classes } = this.props;
         return (
             <Card className={classes.card} >
                 <CardContent>
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
                     </Typography>
-
+                    
                     <Typography variant="h5" component="h2">
                             Project: {this.props.projectName}
                     </Typography>
