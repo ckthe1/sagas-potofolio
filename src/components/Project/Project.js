@@ -43,7 +43,7 @@ class Project extends Component {
      
         return (      
             
-            <h1>is this working</h1>
+            
             <div>
                 <div className="flex-container">
                 {this.props.projects.map((project)=>{

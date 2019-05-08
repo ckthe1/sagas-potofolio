@@ -15,7 +15,7 @@ class Header extends Component {
                 <div>
                     <header className="App-header">
                         <h1>Cheng-kou Tongkhuya</h1>
-                        <img src="images/DededeSmash3.png" />
+                        <img src="images/DededeSmash3.png" alt=''/>
                     </header>
                 </div>
             </div>

@@ -81,12 +81,14 @@ render() {
                 <div>
                 <input type="text" placeholder="GitHub URL" value={this.state.git} onChange={this.onChange('github')} size="22"/>
                 <input type="text" placeholder="Web URL" value={this.state.web} onChange={this.onChange('website')} size="22"/>
+                    {/* <a href={this.state.thumbnail} onChange={this.onChange('thumbnail')}></a> */}
+
                 <select value={this.state.thumbnail} onChange={this.onChange('thumbnail')}>
                     <option value=" " >Add Thumbnail</option>
-                    <option value="./images/goat_small.png">Book Store</option>
-                    <option value="./images/fruit_basket.png">Fruit Basket</option>
-                    <option value="./images/ScreenGarden.png">Saga Garden</option>               
-                    <option value="./images/lazyLuigiPizzaParlor.png">Pizza Parlor</option>
+                    <option src="goat_small.png">Book Store</option>
+                    <option src="images/fruit_basket.png">Fruit Basket</option>
+                    <option value="images/ScreenGarden.png">Saga Garden</option>               
+                    <option value="images/lazyLuigiPizzaParlor.png">Pizza Parlor</option>
                 </select>
                 </div>
                 <input type="text" placeholder="Description" value={this.state.description} onChange={this.onChange('description')} className="DescriptionField"/><br />
